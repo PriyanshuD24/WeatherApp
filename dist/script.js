@@ -21,7 +21,7 @@ button1.addEventListener('click',function(){
             console.log(pos.coords.accuracy);
             let input=lat+","+lon;
         async function getWeather(){
-            let cont= await fetch('http://api.weatherapi.com/v1/current.json?key=0171055b6af94321b2884922241902&q='+input);
+            let cont= await fetch('https://api.weatherapi.com/v1/current.json?key=0171055b6af94321b2884922241902&q='+input);
            let content=await cont.json();
             return content;
           
@@ -84,7 +84,7 @@ document.querySelector("input")
 searchButton.addEventListener('click',function(){
     let input=document.querySelector('input').value;
     async function getWeather(){
-        let cont= await fetch('http://api.weatherapi.com/v1/current.json?key=0171055b6af94321b2884922241902&q='+input);
+        let cont= await fetch('https://api.weatherapi.com/v1/current.json?key=0171055b6af94321b2884922241902&q='+input);
        let content=await cont.json();
         return content;
       
